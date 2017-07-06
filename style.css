@@ -86,6 +86,7 @@ body {
 
 .bookmarks li {
   box-shadow: none;
+  position: relative;
 }
 
 .bookmarks a {
@@ -93,7 +94,7 @@ body {
   color: #363636;
   font-size: 20px;
   display: inline-block;
-  width: 415px;
+  width: 350px;
   padding: 10px 10px;
 }
 
@@ -142,6 +143,40 @@ body {
 
 .confirm-delete span {
   font-size: 18px;
+}
+
+.episode {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  padding: 5px;
+  font-size: 26px;
+  transition: .1s;
+  cursor: default;
+  user-select: none;
+}
+
+.episode .prev-episode,
+.episode .next-episode {
+  display: inline-block;
+  transition: .2s .1s;
+  transform: scale(0);
+  cursor: pointer;
+  padding: 0 3px;
+}
+
+.prev-episode:hover,
+.next-episode:hover {
+  color: #a1a1a1;
+}
+
+.bookmarks li .episode:hover .prev-episode,
+.bookmarks li .episode:hover .next-episode {
+  transform: scale(1);
+}
+
+.bookmarks li:hover .episode {
+  right: 60px;
 }
 
 @keyframes empty {
