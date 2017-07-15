@@ -23,6 +23,9 @@ body {
   top: 0;
   right: 0;
 }
+.button-add:hover {
+  background-color: rgb(79, 182, 77);
+}
 
 .button {
   background-color: rgb(100, 215, 97);
@@ -177,6 +180,13 @@ body {
 
 .bookmarks li:hover .episode {
   right: 60px;
+}
+
+.add-first-serial {
+  font-size: 18px;
+}
+.add-first-serial.hide {
+  display: none;
 }
 
 @keyframes empty {

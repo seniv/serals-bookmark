@@ -3,6 +3,7 @@ const addURL = document.getElementById('url');
 const addName = document.getElementById('name');
 const bookmarks = document.getElementsByClassName('bookmarks')[0];
 const addArea = document.getElementsByClassName('add-area')[0];
+const firstSerial = document.getElementsByClassName('add-first-serial')[0];
 const urls = document.getElementsByClassName('url');
 const deleteDialog = createDeleteDialog();
 const editDialog = createEditDialog();
@@ -24,6 +25,8 @@ if(DB.serials.length) {
   }).forEach (serial => {
     add(serial.url, serial.name, serial.id, serial.episode);
   })
+} else {
+  firstSerial.classList.remove('hide');
 }
 
 addName.addEventListener('click', () => {
@@ -38,6 +41,8 @@ addURL.addEventListener('click', () => {
 });
 
 addButton.addEventListener('click', ev => {
+  if (!firstSerial.classList.contains('hide')) firstSerial.classList.add('hide');
+
   if(addArea.classList.contains('active')) {
     if(!addName.value) {
       if (!addName.classList.contains('empty')) {

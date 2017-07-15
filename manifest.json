@@ -1,18 +1,20 @@
 {
-	"manifest_version": 2,
+  "manifest_version": 2,
 
-	"name": "Serials Bookmark",
-	"version": "1.2",
-	"description": "Зручні закладки для серіалів",
+  "name": "Serials Bookmark",
+  "version": "1.2.3",
+  "description": "Зручні закладки для серіалів",
 
-	"permissions": [ ],
-	"icons": {
-    "64": "img/icon64.png"
+  "permissions": [],
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
   },
 
-	"browser_action": {
-		"default_title": "Serials Bookmark",
-		"default_icon": "img/icon.png",
-		"default_popup": "index.html"
-	}
+  "browser_action": {
+    "default_title": "Serials Bookmark",
+    "default_icon": "img/icon16.png",
+    "default_popup": "index.html"
+  }
 }
