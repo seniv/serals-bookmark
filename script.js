@@ -23,7 +23,7 @@ if(DB.serials.length) {
     if (a.number < b.number) return -1;
     return 0;
   }).forEach (serial => {
-    add(serial.url, serial.name, serial.id, serial.episode);
+    add(serial.url, serial.name, serial.id, serial.season, serial.episode);
   })
 } else {
   firstSerial.classList.remove('hide');
@@ -63,6 +63,7 @@ addButton.addEventListener('click', ev => {
       name: addName.value,
       url: addURL.value,
       number: DB.lastUpdate++,
+      season: 1,
       episode: 1
     });
     localStorage.setItem('serials', JSON.stringify(DB));
@@ -74,17 +75,26 @@ addButton.addEventListener('click', ev => {
   }
 });
 
-function add(url, name, id, ep = '1') {
+function add(url, name, id, se = '1', ep = '1') {
   let a = createElement('a', { href: url, className: 'url', target: '_blank' }, name);
   let del = createElement('div', { className: 'delete' });
   let edit = createElement('div', { className: 'edit' });
 
-  let = prevEpisode = createElement('div', { className: 'prev-episode' }, '«');
-  let = nextEpisode = createElement('div', { className: 'next-episode' }, '»');
-  let = episodeNumber = createElement('span', { className: 'episode-number' }, ep+'');
-  let episode = createElement('div', { className: 'episode' }, prevEpisode, episodeNumber, nextEpisode);
+  let prevSeason = createElement('div', { className: 'prev' }, '-');
+  let seasonNumber = createElement('span', { className: 'season-number' }, se+'');
+  let nextSeason = createElement('div', { className: 'next' }, '+');
+  let seasonNumberAndNext = createElement('div', { className: 'number-and-next' }, seasonNumber, nextSeason);
+  let season = createElement('div', { className: 'episode se' }, prevSeason, seasonNumberAndNext);
 
-  let li = createElement('li', { id: id }, a, del, edit, episode);
+  let prevEpisode = createElement('div', { className: 'prev' }, '-');
+  let episodeNumber = createElement('span', { className: 'episode-number' }, ep+'');
+  let nextEpisode = createElement('div', { className: 'next' }, '+');
+  let episodeNumberAndNext = createElement('div', { className: 'number-and-next' }, episodeNumber, nextEpisode);
+  let episode = createElement('div', { className: 'episode ep' }, prevEpisode, episodeNumberAndNext);
+
+  let seasonAndEpisode = createElement('div', { className: 'season-and-episode' }, season, episode);
+
+  let li = createElement('li', { id: id }, a, del, edit, seasonAndEpisode);
   bookmarks.prepend(li);
 
   bindEvents(li);
@@ -94,9 +104,14 @@ function bindEvents(serialElement) {
   let url = serialElement.querySelector('.url');
   let deleteButton = serialElement.querySelector('.delete');
   let editButton = serialElement.querySelector('.edit');
-  let prevEpisode = serialElement.querySelector('.prev-episode');
-  let nextEpisode = serialElement.querySelector('.next-episode');
-  let episode = serialElement.querySelector('.episode-number');
+
+  let prevSeason = serialElement.querySelector('.se .prev');
+  let nextSeason = serialElement.querySelector('.se .next');
+  let season = serialElement.querySelector('.se .season-number');
+
+  let prevEpisode = serialElement.querySelector('.ep .prev');
+  let nextEpisode = serialElement.querySelector('.ep .next');
+  let episode = serialElement.querySelector('.ep .episode-number');
 
   url.addEventListener('click', ({ target }) => {
     DB.serials.forEach((serial, i) => {
@@ -176,9 +191,32 @@ function bindEvents(serialElement) {
     }
     target.classList.toggle('active');
   });
+
+  prevSeason.addEventListener('click', ({ target }) => {
+    DB.serials.forEach((serial, i) => {
+      if(serial.id == target.parentNode.parentNode.parentNode.id) {
+        if(!DB.serials[i].season) DB.serials[i].season = 1;
+        if(serial.season > 1) {
+          season.textContent = --DB.serials[i].season;
+          localStorage.setItem('serials', JSON.stringify(DB));
+        }
+      }
+    });
+  });
+
+  nextSeason.addEventListener('click', ({ target }) => {
+    DB.serials.forEach((serial, i) => {
+      if(serial.id == target.parentNode.parentNode.parentNode.parentNode.id) {
+        if(!DB.serials[i].season) DB.serials[i].season = 1;
+        season.textContent = ++DB.serials[i].season;
+        localStorage.setItem('serials', JSON.stringify(DB));
+      }
+    });
+  });
+
   prevEpisode.addEventListener('click', ({ target }) => {
     DB.serials.forEach((serial, i) => {
-      if(serial.id == target.parentNode.parentNode.id) {
+      if(serial.id == target.parentNode.parentNode.parentNode.id) {
         if(!DB.serials[i].episode) DB.serials[i].episode = 1;
         if(serial.episode > 1) {
           episode.textContent = --DB.serials[i].episode;
@@ -187,9 +225,10 @@ function bindEvents(serialElement) {
       }
     });
   });
+
   nextEpisode.addEventListener('click', ({ target }) => {
     DB.serials.forEach((serial, i) => {
-      if(serial.id == target.parentNode.parentNode.id) {
+      if(serial.id == target.parentNode.parentNode.parentNode.parentNode.id) {
         if(!DB.serials[i].episode) DB.serials[i].episode = 1;
         episode.textContent = ++DB.serials[i].episode;
         localStorage.setItem('serials', JSON.stringify(DB));

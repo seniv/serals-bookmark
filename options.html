@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Options</title>
+	<style>
+		.export-and-import {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			width: 800px;
+			border-bottom: 1px solid #D0D0D0;
+			margin-bottom: 10px;
+		}
+		.export {
+			padding-right: 5px;
+			flex: 1;
+		}
+		.import {
+			padding-left: 5px;
+			flex: 1;
+		}
+		body {
+			font-size: 14px;
+		}
+		a {
+			display: block;
+			padding: 10px;
+			background-color: #E7E7E7;
+			text-decoration: none;
+			margin: 10px 0;
+			text-align: center;
+		}
+		.download {
+			margin-top: 12px;
+		}
+		.result {
+			display: none;
+			border-top: 1px solid #D0D0D0;
+			font-size: 24px;
+			text-align: center;
+		}
+		.result.show {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="export-and-import">
+		<div class="export">
+			<div>Ви можете експортувати свій список серіалів щоб потім імпортувати його на іншому комп'ютері, наприклад.</div>
+			<a href="#" class="download" id="link" download="serials-bookmark.json">Завантажити список</a>
+		</div>
+
+		<div class="import">
+			<div>Щоб імпортувати список виберіть файл та настисніть кнопку</div>
+			<input accept=".json" type="file" id="selectFiles" value="Import" /><br />
+			<a href="#" class="import" id="import">Відвантажити</a>
+		</div>
+	</div>
+	<div class="reset">
+		<div>Також ви можете видалити всі серіали з бази даних. Майте на увазі, ви <b>не зможете</b> їх відновити!</div>
+		<input type="checkbox" id="checkbox" name="checkbox"> 
+		<label for="checkbox">Підтвердіть що ви справді хочете очистити базу, щоб це не сталося випадково</label>
+			<a href="#" class="download" id="clear">Очистити базу даних</a>
+	</div>
+	<div class="result" id="result"></div>
+	<script src="options.js"></script>
+</body>
+</html>
