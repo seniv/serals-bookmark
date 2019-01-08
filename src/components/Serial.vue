@@ -34,11 +34,10 @@
 </template>
 
 <script>
-
   export default {
     name: 'serial',
     props: ['item'],
-    data: function() {
+    data () {
       return {
         showEdit: false,
         showDelete: false,
@@ -46,7 +45,7 @@
           namePlaceholder: chrome.i18n.getMessage('namePlaceholder'),
           urlPlaceholder: chrome.i18n.getMessage('urlPlaceholder'),
           deleteAsk: chrome.i18n.getMessage('deleteAsk'),
-          deleteConfirm: chrome.i18n.getMessage('deleteConfirm'),
+          deleteConfirm: chrome.i18n.getMessage('deleteConfirm')
         }
       }
     },
@@ -56,7 +55,7 @@
           return this.item.season ? this.item.season : 1
         },
         set (data) {
-          if(data < 1) return false
+          if (data < 1) return false
           this.item.season = data
           this.item.episode = 1
         }
@@ -80,10 +79,10 @@
     },
     watch: {
       showEdit (x) {
-        if(x) this.showDelete = false
+        if (x) this.showDelete = false
       },
       showDelete (x) {
-        if(x) this.showEdit = false
+        if (x) this.showEdit = false
       }
     },
     filters: {

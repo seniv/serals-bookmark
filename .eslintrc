@@ -5,5 +5,9 @@
   ],
   "env": {
     "jasmine": true
+  },
+  "globals": {
+    "chrome": true,
+    "localStorage": true
   }
 }

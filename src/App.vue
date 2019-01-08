@@ -23,7 +23,7 @@ export default {
   components: {
     Serial
   },
-  data: function() {
+  data () {
     return {
       items: {
         lastID: 0,
@@ -84,11 +84,11 @@ export default {
       })
     },
     addButton () {
-      if(!this.addArea) {
+      if (!this.addArea) {
         this.addArea = true
         return false
       }
-      if(!this.addName || !this.addUrl) {
+      if (!this.addName || !this.addUrl) {
         this.addArea = false
         return false
       }
@@ -100,13 +100,13 @@ export default {
   },
   watch: {
     items: {
-      handler: function() {
+      handler () {
         this.saveItems()
       },
       deep: true
     }
   },
-  created: function() {
+  created () {
     this.loadItems()
   }
 }
