@@ -1,2 +1,16 @@
+.DS_Store
+node_modules
+dist/build.js
+dist/build.css
+yarn-error.log
+npm-debug.log
 
-prepros-6.config
+extension
+extension.zip
+
+# Editor directories and files
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

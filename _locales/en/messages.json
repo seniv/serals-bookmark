@@ -1,0 +1,84 @@
+{
+  "extName": {
+    "message": "Serials Bookmark",
+    "description": "Extension name"
+  },
+  "extDesc": {
+    "message": "Just convenient bookmarks for serials",
+    "description": "Extension description"
+  },
+  "exportDesc": {
+    "message": "You can export your serial list to then import it on another computer, for example.",
+    "description": "Settings html file message"
+  },
+  "exportButton": {
+    "message": "Download",
+    "description": "Settings html file message"
+  },
+  "importDesc": {
+    "message": "To import the list, select the file and click the button",
+    "description": "Settings html file message"
+  },
+  "importButton": {
+    "message": "Upload",
+    "description": "Settings html file message"
+  },
+  "resetDesc": {
+    "message": "You can also remove all serials from the database. Keep in mind, you <b>can not</b> recover them!",
+    "description": "Settings html file message"
+  },
+  "resetCheckbox": {
+    "message": "Confirm that you really want to clear the database so that it does not happen by accident",
+    "description": "Settings html file message"
+  },
+  "resetButton": {
+    "message": "Clear the database",
+    "description": "Settings html file message"
+  },
+
+  "importSelectFile": {
+    "message": "Select the file you want to import!",
+    "description": "Settings js file message"
+  },
+  "importWrongFile": {
+    "message": "This file is not like a serial file, or there are no serials in it",
+    "description": "Settings js file message"
+  },
+  "importSuccess": {
+    "message": "File successfully imported!",
+    "description": "Settings js file message"
+  },
+  "successClear": {
+    "message": "The database has been cleared",
+    "description": "Settings js file message"
+  },
+
+  "appHeader": {
+    "message": "Your serials",
+    "description": "poupup message"
+  },
+  "addButton": {
+    "message": "Add",
+    "description": "poupup message"
+  },
+  "namePlaceholder": {
+    "message": "Name",
+    "description": "poupup message"
+  },
+  "urlPlaceholder": {
+    "message": "Link",
+    "description": "poupup message"
+  },
+  "addDesc": {
+    "message": "You do not have any serials. <br>To add them - click the \"Add\" button.",
+    "description": "poupup message"
+  },
+  "deleteAsk": {
+    "message": "Are you sure you want to delete?",
+    "description": "poupup message"
+  },
+  "deleteConfirm": {
+    "message": "Yes",
+    "description": "poupup message"
+  }
+}

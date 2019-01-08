@@ -45,28 +45,32 @@
 		.result.show {
 			display: block;
 		}
+		a.disabled {
+	    pointer-events: none;
+	    color: silver;
+		}
 	</style>
 </head>
 <body>
 	<div class="export-and-import">
 		<div class="export">
-			<div>Ви можете експортувати свій список серіалів щоб потім імпортувати його на іншому комп'ютері, наприклад.</div>
-			<a href="#" class="download" id="link" download="serials-bookmark.json">Завантажити список</a>
+			<div id="exportDesc"></div>
+			<a href="#" class="download" id="link" download="serials-bookmark.json"></a>
 		</div>
 
 		<div class="import">
-			<div>Щоб імпортувати список виберіть файл та настисніть кнопку</div>
+			<div id="importDesc"></div>
 			<input accept=".json" type="file" id="selectFiles" value="Import" /><br />
-			<a href="#" class="import" id="import">Відвантажити</a>
+			<a href="#" class="import" id="import"></a>
 		</div>
 	</div>
 	<div class="reset">
-		<div>Також ви можете видалити всі серіали з бази даних. Майте на увазі, ви <b>не зможете</b> їх відновити!</div>
+		<div id="resetDesc"></div>
 		<input type="checkbox" id="checkbox" name="checkbox"> 
-		<label for="checkbox">Підтвердіть що ви справді хочете очистити базу, щоб це не сталося випадково</label>
-			<a href="#" class="download" id="clear">Очистити базу даних</a>
+		<label for="checkbox" id="resetCheckbox"></label>
+			<a href="#" class="download" id="clear"></a>
 	</div>
 	<div class="result" id="result"></div>
-	<script src="options.js"></script>
+	<script src="js/options.js"></script>
 </body>
 </html>

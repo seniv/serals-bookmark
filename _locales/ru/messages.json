@@ -1,0 +1,84 @@
+{
+  "extName": {
+    "message": "Serials Bookmark",
+    "description": "Extension name"
+  },
+  "extDesc": {
+    "message": "Просто удобные закладки для сериалов",
+    "description": "Extension description"
+  },
+  "exportDesc": {
+    "message": "Вы можете экспортировать свой список сериалов чтобы затем импортировать его на другом компьютере, например.",
+    "description": "Settings html file message"
+  },
+  "exportButton": {
+    "message": "Скачать список",
+    "description": "Settings html file message"
+  },
+  "importDesc": {
+    "message": "Чтобы импортировать выберите файл и нажмите кнопку",
+    "description": "Settings html file message"
+  },
+  "importButton": {
+    "message": "Загрузить",
+    "description": "Settings html file message"
+  },
+  "resetDesc": {
+    "message": "Также вы можете удалить все сериалы из базы данных. Имейте в виду, вы <b>не сможете</b> их восстановить!",
+    "description": "Settings html file message"
+  },
+  "resetCheckbox": {
+    "message": "Подтвердите что вы действительно хотите очистить базу, чтобы это не произошло случайно",
+    "description": "Settings html file message"
+  },
+  "resetButton": {
+    "message": "Очистить базу данных",
+    "description": "Settings html file message"
+  },
+
+  "importSelectFile": {
+    "message": "Выберите файл который хотите импортировать!",
+    "description": "Settings js file message"
+  },
+  "importWrongFile": {
+    "message": "Этот файл не похож на файл с сериалами, или в нем нет сериалов",
+    "description": "Settings js file message"
+  },
+  "importSuccess": {
+    "message": "Файл успешно импортировано!",
+    "description": "Settings js file message"
+  },
+  "successClear": {
+    "message": "Базу данных очищено",
+    "description": "Settings js file message"
+  },
+
+  "appHeader": {
+    "message": "Вашы сериалы",
+    "description": "poupup message"
+  },
+  "addButton": {
+    "message": "Добавить",
+    "description": "poupup message"
+  },
+  "namePlaceholder": {
+    "message": "Название",
+    "description": "poupup message"
+  },
+  "urlPlaceholder": {
+    "message": "Ссылка",
+    "description": "poupup message"
+  },
+  "addDesc": {
+    "message": "У вас нет ни одного сериала. <br>Чтобы добавить их - нажмите кнопку \"Добавить\"",
+    "description": "poupup message"
+  },
+  "deleteAsk": {
+    "message": "Действительно удалить?",
+    "description": "poupup message"
+  },
+  "deleteConfirm": {
+    "message": "Да",
+    "description": "poupup message"
+  }
+}

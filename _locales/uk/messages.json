@@ -1,0 +1,84 @@
+{
+  "extName": {
+    "message": "Serials Bookmark",
+    "description": "Extension name"
+  },
+  "extDesc": {
+    "message": "Просто зручні закладки для серіалів",
+    "description": "Extension description"
+  },
+  "exportDesc": {
+    "message": "Ви можете експортувати свій список серіалів щоб потім імпортувати його на іншому комп'ютері, наприклад.",
+    "description": "Settings html file message"
+  },
+  "exportButton": {
+    "message": "Завантажити список",
+    "description": "Settings html file message"
+  },
+  "importDesc": {
+    "message": "Щоб імпортувати список виберіть файл та натисніть кнопку",
+    "description": "Settings html file message"
+  },
+  "importButton": {
+    "message": "Відвантажити",
+    "description": "Settings html file message"
+  },
+  "resetDesc": {
+    "message": "Також ви можете видалити всі серіали з бази даних. Майте на увазі, ви <b>не зможете</b> їх відновити!",
+    "description": "Settings html file message"
+  },
+  "resetCheckbox": {
+    "message": "Підтвердіть що ви справді хочете очистити базу, щоб це не сталося випадково",
+    "description": "Settings html file message"
+  },
+  "resetButton": {
+    "message": "Очистити базу даних",
+    "description": "Settings html file message"
+  },
+
+  "importSelectFile": {
+    "message": "Виберіть файл який хочете імпортувати!",
+    "description": "Settings js file message"
+  },
+  "importWrongFile": {
+    "message": "Цей файл не схожий на файл з серіалами, або в ньому немає серіалів",
+    "description": "Settings js file message"
+  },
+  "importSuccess": {
+    "message": "Файл успішно імпортовано!",
+    "description": "Settings js file message"
+  },
+  "successClear": {
+    "message": "Базу даних очищено",
+    "description": "Settings js file message"
+  },
+
+  "appHeader": {
+    "message": "Ваші серіали",
+    "description": "poupup message"
+  },
+  "addButton": {
+    "message": "Додати",
+    "description": "poupup message"
+  },
+  "namePlaceholder": {
+    "message": "Назва",
+    "description": "poupup message"
+  },
+  "urlPlaceholder": {
+    "message": "Писилання",
+    "description": "poupup message"
+  },
+  "addDesc": {
+    "message": "У вас немає жодного серіалу.<br>Щоб додати їх — натисніть кнопку \"Додати\"",
+    "description": "poupup message"
+  },
+  "deleteAsk": {
+    "message": "Справді видалити?",
+    "description": "poupup message"
+  },
+  "deleteConfirm": {
+    "message": "Так",
+    "description": "poupup message"
+  }
+}
